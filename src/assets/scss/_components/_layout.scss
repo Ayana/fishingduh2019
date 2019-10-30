@@ -1,0 +1,67 @@
+//  Layout Styles
+//  -----------------------------
+
+//	Header
+// --------------
+
+.l-header {
+  @media #{$mobile} {
+    position: relative;
+    width: 100%;
+    z-index: 100;
+  }
+  @media #{$desktop} {
+    // background: rgba(255,255,255,0.7);
+    position: relative;
+    z-index: 100;
+    .inner {
+      position: relative;
+    }
+  }
+}
+
+
+//	Content
+// --------------
+
+.l-content {
+  @media #{$mobile} {
+  }
+  @media #{$desktop} {
+    min-width: 1080px;
+  }
+}
+
+//	Main
+// --------------
+
+.l-main {
+  @media #{$desktop} {
+    float: left;
+    width: 65%;
+    min-width: 730px;
+  }
+}
+
+
+//	Side
+// --------------
+
+.l-side {
+  @media #{$mobile} {
+    margin-top: 20px;
+    width: 100%;
+  }
+  @media #{$desktop} {
+    float: right;
+    margin-left: 20px;
+    width: 27%;
+  }
+}
+
+//	Footer
+// --------------
+
+
+.l-footer {
+}
