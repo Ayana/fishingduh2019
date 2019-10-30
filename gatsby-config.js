@@ -28,11 +28,21 @@ module.exports = {
       },
     },
     {
+      // Plugin: gatsby-source-instagram-all - Instagram.js
       resolve: `gatsby-source-instagram-all`,
       options: {
         access_token: "2073134132.d1bad15.faf29b1f4d204935a64b22416267da36"
       }
     },
+    {
+      // Plugin: gatsby-source-instagram - Insta.js
+      resolve: `gatsby-source-instagram`,
+      options: {
+        username: `misawayanohanashi`,
+        access_token: "2073134132.d1bad15.faf29b1f4d204935a64b22416267da36",
+        instagram_id: "misawayanohanashi",
+      },
+    },  
     `gatsby-plugin-sass`,
    // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

@@ -52,7 +52,7 @@ const Instagram = () => (
     render={(data) => (
       <InstagramWrapper>
         <div className="instagram container-narrow">
-          {/* <div className="instagram-inner">
+          <div className="instagram-inner">
             {
               data.allInstagramContent.edges.map((item, i) => (
                 item.node.localImage ? (
@@ -71,7 +71,7 @@ const Instagram = () => (
                 ) : (<div></div>)
               ))
             }
-          </div> */}
+          </div>
         </div>
       </InstagramWrapper>
     )}
