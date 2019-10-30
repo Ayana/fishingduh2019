@@ -8,7 +8,7 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <div>
-      <Instagram />
+      {/* <Instagram /> */}
     </div>
   </Layout>
 )
