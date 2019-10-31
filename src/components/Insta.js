@@ -13,6 +13,11 @@ const InstagramWrapper = styled.div`
       .instagram-item {
         min-width: 31%;
         margin-bottom: 2em;
+				transition: .2s;
+				&:hover {
+					margin-top: -8px;
+					/* opacity: 0.7; */
+				}
       }
     }
   }
@@ -22,7 +27,7 @@ const InstagramWrapper = styled.div`
 const Insta = () => {
   const data = useStaticQuery(graphql`
     query instaQuery {
-			allInstaNode(sort: {fields: timestamp, order: DESC}) {
+			allInstaNode(sort: {fields: timestamp, order: DESC}, limit: 12) {
 				edges {
 					node {
 						id
@@ -43,7 +48,6 @@ const Insta = () => {
 		<InstagramWrapper>
 			<div className="instagram container-narrow">
 				<div className="instagram-inner">
-					{console.log(data)}
 					{
 						data.allInstaNode.edges.map((item, i) => (
 							item.node.localFile ? (
