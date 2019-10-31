@@ -23,8 +23,9 @@ const InstagramWrapper = styled.div`
   }
 `
 
+
 const Insta = () => {
-  const {allInstaNode} = useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`
     query {
 			allInstaNode(sort: {fields: timestamp, order: DESC}, limit: 12) {
 				edges {
@@ -48,7 +49,7 @@ const Insta = () => {
 			<div className="instagram container-narrow">
 				<div className="instagram-inner">
 					{
-						allInstaNode.edges.map((item, i) => (
+						data.allInstaNode.edges.map((item, i) => (
 							item.node.localFile ? (
 								<div key={i} className="instagram-item">
 									<a 
