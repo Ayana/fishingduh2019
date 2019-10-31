@@ -22,14 +22,10 @@ const InstagramWrapper = styled.div`
 const Insta = () => {
   const data = useStaticQuery(graphql`
     query instaQuery {
-			allInstaNode {
+			allInstaNode(sort: {fields: timestamp, order: DESC}) {
 				edges {
 					node {
 						id
-						likes
-						original
-						timestamp
-						caption
 						localFile {
 							childImageSharp {
 								fluid(maxHeight: 500, maxWidth: 500 quality: 50) {
@@ -47,12 +43,13 @@ const Insta = () => {
 		<InstagramWrapper>
 			<div className="instagram container-narrow">
 				<div className="instagram-inner">
+					{console.log(data)}
 					{
 						data.allInstaNode.edges.map((item, i) => (
 							item.node.localFile ? (
 								<div key={i} className="instagram-item">
 									<a 
-										href=""
+										href={`https://www.instagram.com/p/${item.node.id}`}
 										target="_blank" 
 										rel="noopener noreferrer" 
 										className="hover"
