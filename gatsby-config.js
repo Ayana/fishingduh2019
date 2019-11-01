@@ -36,6 +36,13 @@ module.exports = {
         // instagram_id: "misawayanohanashi",
       },
     },  
+    // {
+    //   // Plugin: gatsby-source-instagram-all - Insta.js
+    //   resolve: `gatsby-source-instagram-all`,
+    //   options: {
+    //     access_token: "2073134132.d1bad15.faf29b1f4d204935a64b22416267da36"
+    //   }
+    // }
     `gatsby-plugin-sass`,
    // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
