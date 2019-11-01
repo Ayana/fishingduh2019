@@ -14,9 +14,10 @@ const InstagramWrapper = styled.div`
         min-width: 31%;
         margin-bottom: 2em;
 				transition: .2s;
-				&:hover {
-					margin-top: -8px;
-					/* opacity: 0.7; */
+				@media (min-width:768px) {
+					&:hover {
+						margin-top: -8px;
+					}
 				}
       }
     }
