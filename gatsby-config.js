@@ -28,6 +28,14 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "GTM-TBKKX9R",
+        includeInDevelopment: false,
+        defaultDataLayer: { platform: "gatsby" },
+      },
+    },
+    {
       // Plugin: gatsby-source-instagram - Insta.js
       resolve: `gatsby-source-instagram`,
       options: {
